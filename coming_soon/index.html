@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pay101 - The next generation payment platform. Coming Soon.">
+    <title>Pay101 | Coming Soon</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00f2fe;
+            --secondary: #4facfe;
+            --dark: #0a0f16;
+            --text: #ffffff;
+            --text-muted: #a0aec0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Ambient glowing orbs */
+        .bg-element {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: 0;
+            animation: float 12s infinite ease-in-out alternate;
+        }
+
+        .bg-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(79, 172, 254, 0.25);
+            top: -50px;
+            left: -100px;
+        }
+
+        .bg-2 {
+            width: 500px;
+            height: 500px;
+            background: rgba(0, 242, 254, 0.2);
+            bottom: -150px;
+            right: -150px;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(60px, 80px) scale(1.15); }
+        }
+
+        /* Glassmorphism Card Container */
+        .card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            padding: 3.5rem;
+            text-align: center;
+            z-index: 1;
+            max-width: 550px;
+            width: 90%;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6);
+            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 2.5rem;
+            background-color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo:hover {
+            transform: scale(1.08);
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Animated Loading Dots */
+        .loader {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: pulse 1.5s infinite ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+        }
+
+        .dot:nth-child(2) { animation-delay: 0.2s; }
+        .dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(0.6); opacity: 0.4; }
+            50% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .card { padding: 2.5rem 1.5rem; }
+            .logo { max-width: 160px; margin-bottom: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Ambient glowing backgrounds -->
+    <div class="bg-element bg-1"></div>
+    <div class="bg-element bg-2"></div>
+    
+    <div class="card">
+        <!-- Fetching logo dynamically from admin portal -->
+        <img src="https://admin.pay101.uk/pay101.png" alt="Pay101 Logo" class="logo" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'60\' viewBox=\'0 0 200 60\'%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'28\' font-weight=\'bold\' fill=\'%23ffffff\'%3EPay101%3C/text%3E%3C/svg%3E';">
+        
+        <h1>Coming Soon</h1>
+        <p>We are meticulously crafting a superior payment experience. Our platform will be launching shortly. Stay tuned!</p>
+        
+        <!-- Subtle pulsing indicator -->
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>
